@@ -69,9 +69,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.apply {
             openimg.setOnClickListener {
-                val gelleryIntent =
-                    Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
-                startActivityForResult(gelleryIntent, 101)
+               val openGellery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                startActivityForResult(openGellery, 101)
             }
         }
     }
@@ -79,10 +78,15 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 101 && resultCode == RESULT_OK){
-
             binding.apply {
                 openimg.setImageURI(data?.data)
                 openimg.isClickable = false
+                reset.visibility = View.VISIBLE
+                reset.setOnClickListener {
+                    reset.visibility = View.GONE
+                    openimg.setImageResource(R.drawable.pickimg)
+                    openimg.isClickable = true
+                }
             }
         }
     }
