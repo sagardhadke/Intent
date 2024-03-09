@@ -117,8 +117,9 @@
 
     <ImageView
         android:id="@+id/reset"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="16dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/openimg"
         app:layout_constraintEnd_toEndOf="parent"
