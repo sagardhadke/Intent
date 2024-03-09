@@ -3,6 +3,8 @@ package net.uniquecomputer.intent
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -62,5 +64,27 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        //Explicit Intent
+        //Open  Gallery and Pick Image
+
+        binding.apply {
+            openimg.setOnClickListener {
+                val gelleryIntent =
+                    Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                startActivityForResult(gelleryIntent, 101)
+            }
+        }
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 101 && resultCode == RESULT_OK){
+
+            binding.apply {
+                openimg.setImageURI(data?.data)
+                openimg.isClickable = false
+            }
+        }
+    }
+
 }
