@@ -46,35 +46,35 @@
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@drawable/call"
-            android:layout_margin="5dp"/>
+            android:layout_margin="10dp"/>
 
         <ImageView
             android:id="@+id/mail"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@drawable/mail"
-            android:layout_margin="5dp"/>
+            android:layout_margin="10dp"/>
 
         <ImageView
             android:id="@+id/web"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@drawable/web"
-            android:layout_margin="5dp"/>
+            android:layout_margin="10dp"/>
 
         <ImageView
             android:id="@+id/instagram"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@drawable/instagram"
-            android:layout_margin="5dp"/>
+            android:layout_margin="10dp"/>
 
         <ImageView
             android:id="@+id/linkedin"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@drawable/linkedin"
-            android:layout_margin="5dp"/>
+            android:layout_margin="10dp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
