@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Types Of Intent \n Implicit intents \n Explicit intents"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/implicit_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Implicit Intent"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/implicit_txt"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/call"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/call"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/mail"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/mail"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/web"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/web"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/instagram"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/instagram"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/linkedin"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/linkedin"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
